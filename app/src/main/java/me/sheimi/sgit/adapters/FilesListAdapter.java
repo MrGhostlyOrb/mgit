@@ -40,22 +40,15 @@ public class FilesListAdapter extends ArrayAdapter<File> {
             holder = new FilesListItemHolder();
             holder.fileTitle = (TextView) convertView
                     .findViewById(R.id.fileTitle);
-            holder.fileIcon = (ImageView) convertView
-                    .findViewById(R.id.fileIcon);
             convertView.setTag(holder);
         } else {
             holder = (FilesListItemHolder) convertView.getTag();
         }
         File item = getItem(position);
         holder.fileTitle.setText(item.getName());
-        if (item.isDirectory()) {
-            holder.fileIcon.setImageResource(Profile.getStyledResource(getContext(), R.attr.ic_folder_fl));
-        } else {
-            holder.fileIcon.setImageResource(Profile.getStyledResource(getContext(), R.attr.ic_file_fl));
-        }
         // set if selected
         if (convertView.isSelected()) {
-            convertView.setBackgroundColor(convertView.getContext().getResources().getColor(R.color.pressed_sgit));
+            convertView.setBackgroundColor(convertView.getContext().getResources().getColor(R.color.design_default_color_background));
         } else {
             convertView.setBackgroundColor(convertView.getContext().getResources().getColor(android.R.color.transparent));
         }
@@ -92,6 +85,5 @@ public class FilesListAdapter extends ArrayAdapter<File> {
 
     private static class FilesListItemHolder {
         public TextView fileTitle;
-        public ImageView fileIcon;
     }
 }

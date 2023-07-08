@@ -4,7 +4,7 @@
           android:exitFadeDuration="@android:integer/config_shortAnimTime" >
 
     <item android:state_pressed="true"
-          android:drawable="@color/branch_name_bg_pressed" />
-    <item android:drawable="@color/branch_name_bg" />
+          android:drawable="@android:color/system_accent1_300" />
+    <item android:drawable="@android:color/system_accent1_800" />
 
 </selector>

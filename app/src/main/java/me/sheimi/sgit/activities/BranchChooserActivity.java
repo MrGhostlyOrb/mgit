@@ -14,7 +14,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -219,28 +218,17 @@ public class BranchChooserActivity extends SheimiFragmentActivity implements Act
                 holder = new ListItemHolder();
                 holder.commitTitle = (TextView) convertView
                         .findViewById(R.id.commitTitle);
-                holder.commitIcon = (ImageView) convertView
-                        .findViewById(R.id.commitIcon);
                 convertView.setTag(holder);
             } else {
                 holder = (ListItemHolder) convertView.getTag();
             }
             String commitName = getItem(position);
             String displayName = Repo.getCommitDisplayName(commitName);
-            int commitType = Repo.getCommitType(commitName);
-            switch (commitType) {
-                case Repo.COMMIT_TYPE_HEAD:
-                    holder.commitIcon.setImageResource(R.drawable.ic_branch_d);
-                    break;
-                case Repo.COMMIT_TYPE_TAG:
-                    holder.commitIcon.setImageResource(R.drawable.ic_tag_d);
-                    break;
-            }
             holder.commitTitle.setText(displayName);
 
             // set if selected
             if (convertView.isSelected()) {
-                convertView.setBackgroundColor(convertView.getContext().getResources().getColor(R.color.pressed_sgit));
+                convertView.setBackgroundColor(convertView.getContext().getResources().getColor(R.color.design_default_color_background));
             } else {
                 convertView.setBackgroundColor(convertView.getContext().getResources().getColor(android.R.color.transparent));
             }
@@ -251,6 +239,5 @@ public class BranchChooserActivity extends SheimiFragmentActivity implements Act
 
     private static class ListItemHolder {
         public TextView commitTitle;
-        public ImageView commitIcon;
     }
 }

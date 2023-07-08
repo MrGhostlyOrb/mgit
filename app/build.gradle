@@ -4,7 +4,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 34
     buildToolsVersion '30.0.3'
 
     compileOptions {
@@ -15,8 +15,8 @@ android {
 
     defaultConfig {
         applicationId "com.manichord.mgit"
-        minSdkVersion 21
-        targetSdkVersion 31
+        minSdkVersion 31
+        targetSdkVersion 34
 
         vectorDrawables.useSupportLibrary = true
 
@@ -28,9 +28,6 @@ android {
         dataBinding true
     }
 
-    lintOptions {
-        abortOnError false
-    }
 
     signingConfigs {
         if (project.hasProperty('special')) {
@@ -54,6 +51,10 @@ android {
         release {
             signingConfig signingConfigs.release
         }
+    }
+    namespace 'me.sheimi.sgit'
+    lint {
+        abortOnError false
     }
 }
 

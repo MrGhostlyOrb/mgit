@@ -69,16 +69,15 @@ public class RepoDetailActivity extends SheimiFragmentActivity {
 
     @Override
     protected void onActivityResult (int requestCode, int resultCode, Intent data) {
-	switch (requestCode) {
-	case BRANCH_CHOOSE_ACTIVITY:
-	    String branchName = mRepo.getBranchName();
-	    if (branchName == null) {
-		showToastMessage(R.string.error_something_wrong);
-		return;
-	    }
-	    reset(branchName);
-	    break;
-	}
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == BRANCH_CHOOSE_ACTIVITY) {
+            String branchName = mRepo.getBranchName();
+            if (branchName == null) {
+                showToastMessage(R.string.error_something_wrong);
+                return;
+            }
+            reset(branchName);
+        }
     }
 
     @Override
@@ -94,7 +93,6 @@ public class RepoDetailActivity extends SheimiFragmentActivity {
         repoInit();
         setTitle(mRepo.getDiaplayName());
         setContentView(R.layout.activity_repo_detail);
-        setupActionBar();
         createFragments();
         setupViewPager();
         setupPullProgressView();
@@ -150,12 +148,6 @@ public class RepoDetailActivity extends SheimiFragmentActivity {
                 .findViewById(R.id.leftHint);
         mPullRightHint = (TextView) mPullProgressContainer
                 .findViewById(R.id.rightHint);
-    }
-
-    private void setupActionBar() {
-        mActionBar = getSupportActionBar();
-        mActionBar.setDisplayShowTitleEnabled(true);
-        mActionBar.setDisplayHomeAsUpEnabled(true);
     }
 
     private void createFragments() {

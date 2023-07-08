@@ -24,7 +24,6 @@
             android:layout_height="wrap_content"
             android:text="@string/default_text"
             android:id="@+id/repoRemote"
-            android:textColor="@color/general_gray_text_color"
             android:textSize="@dimen/repo_list_item_remote_size"/>
 
     <RelativeLayout
@@ -61,7 +60,6 @@
                         android:text="@string/default_text"
                         android:id="@+id/commitAuthor"
                         android:textSize="@dimen/repo_list_item_author_size"
-                        android:textColor="@color/general_gray_text_color"
                         android:layout_alignParentLeft="true"
                         android:textStyle="bold"/>
 
@@ -72,7 +70,6 @@
                         android:id="@+id/commitTime"
                         android:layout_toRightOf="@id/commitAuthor"
                         android:textSize="@dimen/repo_list_item_time_size"
-                        android:textColor="@color/general_gray_text_color"
                         android:layout_marginLeft="@dimen/general_horizontal_margin"/>
             </RelativeLayout>
 
@@ -81,7 +78,6 @@
                     android:layout_height="wrap_content"
                     android:text="@string/default_text"
                     android:id="@+id/commitMsg"
-                    android:textColor="@color/general_gray_text_color"
                     android:textSize="@dimen/repo_list_item_msg_size"/>
         </LinearLayout>
     </RelativeLayout>
@@ -100,7 +96,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/default_text"
                 android:id="@+id/progressMsg"
-                android:textColor="@color/general_gray_text_color"
                 android:textSize="@dimen/repo_list_item_msg_size"
                 android:gravity="left|center"
                 android:layout_marginLeft="@dimen/general_horizontal_margin"

@@ -11,8 +11,7 @@
             android:layout_height="wrap_content"
             android:text="@string/default_text"
             android:id="@+id/pullMsg"
-            android:textSize="@dimen/file_list_header_msg_size"
-            android:textColor="@color/general_gray_text_color"/>
+            android:textSize="@dimen/file_list_header_msg_size"/>
 
     <ProgressBar
             style="?android:attr/progressBarStyleHorizontal"
@@ -30,7 +29,6 @@
                 android:text="@string/default_text"
                 android:id="@+id/leftHint"
                 android:textSize="@dimen/file_list_header_hint_size"
-                android:textColor="@color/general_gray_text_color"
                 android:gravity="left"/>
 
         <TextView
@@ -39,7 +37,6 @@
                 android:text="@string/default_text"
                 android:id="@+id/rightHint"
                 android:textSize="@dimen/file_list_header_hint_size"
-                android:textColor="@color/general_gray_text_color"
                 android:gravity="right"/>
 
     </LinearLayout>

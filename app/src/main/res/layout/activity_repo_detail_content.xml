@@ -13,10 +13,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
-            android:background="?pager_title_strip_background"
             android:paddingBottom="4dp"
-            android:paddingTop="4dp"
-            android:textColor="#fff" />
+            android:paddingTop="4dp" />
     </androidx.viewpager.widget.ViewPager>
 
     <Button
@@ -24,12 +22,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="?bt_branch_name_bg"
         android:gravity="center"
         android:padding="@dimen/branch_label_padding"
         android:text="@string/default_text"
         android:textAlignment="center"
-        android:textColor="?bt_branch_name_text_color"
         android:textSize="@dimen/branch_label_text_size" />
     <ImageView
             android:layout_width="wrap_content"
@@ -37,9 +33,10 @@
             android:id="@+id/commitType"
             android:layout_alignTop="@+id/commitName"
             android:layout_alignBottom="@+id/commitName"
-            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:src="@drawable/ic_branch_w"
-            android:padding="@dimen/general_padding"/>
+            android:padding="@dimen/general_padding"
+            android:contentDescription="@string/default_text" />
 
     <LinearLayout
         android:id="@+id/pullProgressContainer"
@@ -47,7 +44,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_margin="@dimen/general_horizontal_margin"
-        android:background="@drawable/bg_listitem"
         android:orientation="vertical"
         android:padding="@dimen/general_padding_larger"
         android:visibility="gone" >
@@ -57,12 +53,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/default_text"
-            android:textColor="@color/general_gray_text_color"
             android:textSize="@dimen/file_list_header_msg_size" />
 
         <ProgressBar
             android:id="@+id/pullProgress"
-            style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -74,19 +68,17 @@
                 android:id="@+id/leftHint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="left"
+                android:gravity="start"
                 android:text="@string/default_text"
-                android:textColor="@color/general_gray_text_color"
                 android:textSize="@dimen/file_list_header_hint_size" />
 
             <TextView
                 android:id="@+id/rightHint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:gravity="right"
+                android:layout_alignParentEnd="true"
+                android:gravity="end"
                 android:text="@string/default_text"
-                android:textColor="@color/general_gray_text_color"
                 android:textSize="@dimen/file_list_header_hint_size" />
         </RelativeLayout>
     </LinearLayout>

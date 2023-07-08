@@ -247,7 +247,7 @@ public class CommitsListAdapter extends BaseAdapter {
 
         int color, colorResId;
         if (mChosenItems.contains(position)) {
-            colorResId = R.color.pressed_sgit;
+            colorResId = R.color.material_on_primary_emphasis_medium;
         } else {
             colorResId = android.R.color.transparent;
         }
