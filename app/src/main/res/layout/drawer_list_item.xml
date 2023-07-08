@@ -10,7 +10,7 @@
         android:gravity="center_vertical"
         android:minHeight="?android:attr/listPreferredItemHeightSmall"
         android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:textAppearance="?android:attr/textAppearanceListItemSmall" />
+        android:background="@color/material_on_primary_emphasis_medium"
+        android:paddingRight="16dp"/>
 
 </RelativeLayout>

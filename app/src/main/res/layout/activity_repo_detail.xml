@@ -9,8 +9,7 @@
         android:id="@+id/right_drawer"
         android:layout_width="240dp"
         android:layout_height="match_parent"
-        android:layout_gravity="end"
-        android:background="@color/design_default_color_background" >
+        android:layout_gravity="end">
 
         <ListView
             android:id="@+id/repoOperationList"

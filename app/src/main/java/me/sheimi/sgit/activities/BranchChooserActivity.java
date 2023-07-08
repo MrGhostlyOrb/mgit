@@ -226,12 +226,6 @@ public class BranchChooserActivity extends SheimiFragmentActivity implements Act
             String displayName = Repo.getCommitDisplayName(commitName);
             holder.commitTitle.setText(displayName);
 
-            // set if selected
-            if (convertView.isSelected()) {
-                convertView.setBackgroundColor(convertView.getContext().getResources().getColor(R.color.design_default_color_background));
-            } else {
-                convertView.setBackgroundColor(convertView.getContext().getResources().getColor(android.R.color.transparent));
-            }
             return convertView;
         }
 

@@ -47,11 +47,6 @@ public class FilesListAdapter extends ArrayAdapter<File> {
         File item = getItem(position);
         holder.fileTitle.setText(item.getName());
         // set if selected
-        if (convertView.isSelected()) {
-            convertView.setBackgroundColor(convertView.getContext().getResources().getColor(R.color.design_default_color_background));
-        } else {
-            convertView.setBackgroundColor(convertView.getContext().getResources().getColor(android.R.color.transparent));
-        }
         return convertView;
     }
 
